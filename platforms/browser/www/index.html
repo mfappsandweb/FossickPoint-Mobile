@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>FossickPoint Mobile UX Demo</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+
+  <!-- Cordova CSS -->
+  <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+  <!-- <link rel="stylesheet" href="css/jquery.mobile.theme.css" /> -->
+
+  <!-- FontAwesome CDN CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <!-- Platform JS -->
+  <script>
+    var userAgent = navigator.userAgent + '';
+    if (userAgent.indexOf('iPhone') > -1) {
+      document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+      var mobile_system = 'iphone';
+    } else if (userAgent.indexOf('Android') > -1) {
+      document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+      var mobile_system = 'android';
+    } else {
+      var mobile_system = '';
+    }
+  </script>
+  
+  <!-- jQuery JS -->
+  <script src="js/lib/jquery.js"></script>
+  <!-- your scripts here -->
+  <script src="js/app/app.js"></script>
+  <script src="js/app/bootstrap.js"></script>
+  <script src="js/lib/jquery.mobile.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  </head>
+  <body>
+    
+    <div data-role="page">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" data-role="header">
+        <div class="container">
+          <a class="navbar-brand" href="#">Safebox</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Toolbox</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Page Container -->
+    <div class="container">
+
+      <!-- Content -->
+      <div class="row" data-role="content">
+
+        <div class="col-lg-4 col-md-6 mb-4" id="1">
+          <div class="card h-100">
+            <img class="card-img-top" src="http://placehold.it/700x400" alt="Placeholder Image">
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Photo Card</a>
+              </h4>
+              <p class="card-text">This is a sample photo card.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">
+                <a href="#" class="delete-card">Delete <i class="fas fa-times"></i></a>
+                &nbsp;
+                <a href="#" class="favourite-card">Favourite <i class="fas fa-star"></i></a>
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" id="2">
+          <div class="card h-100">
+            <video class="video-container" autoplay loop>
+              <source src="video/The-Launch.mp4" type="video/mp4">
+              This browser doesn't support video format
+            </video>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Video Card</a>
+              </h4>
+              <p class="card-text">This is a demonstration of a video card</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">
+                <a href="#" class="delete-card">Delete <i class="fas fa-times"></i></a>
+                &nbsp;
+                <a href="#" class="favourite-card">Favourite <i class="fas fa-star"></i></a>
+              </small>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4" id="3">
+          <div class="card h-100">
+            <div class="quote-container">
+              <p class="quote-text">This is a sample motivational text quote! ~ The Wise One</p>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Motivational Quote Card</a>
+              </h4>
+              <p class="card-text">This is a motivational quote card.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">
+                <a href="#" class="delete-card">Delete <i class="fas fa-times"></i></a>
+                &nbsp;
+                <a href="#" class="favourite-card">Favourite <i class="fas fa-star"></i></a>
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" id="4">
+            <div class="card h-100">
+              <a href="#">
+                <img class="card-img-top" src="http://placehold.it/700x400" alt="Link Thumbnail Image">
+              </a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Link Card</a>
+                </h4>
+                <p class="card-text">This is a sample link card leading to a toolbox link.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">
+                  <a href="#" class="delete-card">Delete <i class="fas fa-times"></i></a>
+                  &nbsp;
+                  <a href="#" class="favourite-card">Favourite <i class="fas fa-star"></i></a>
+                </small>
+              </div>
+            </div>
+          </div>      
+        
+      </div>
+      <!-- ./row -->
+
+    </div>
+    <!-- ./container -->
+      
+    <!-- Footer -->
+    <footer class="py-5 bg-dark" data-role="footer">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Deakin Capstone Team 17</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    
+    <!-- /page -->
+    </div>
+    
+  </body>
+</html>
