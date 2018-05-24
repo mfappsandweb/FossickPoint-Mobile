@@ -1,73 +1,76 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
     },
-    "installed_plugins": {
-        "cordova-plugin-battery-status": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-media-capture": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-contacts": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-device-motion": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-device-orientation": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-vibration": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        }
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
     },
-    "dependent_plugins": {
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
-        }
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-device-motion": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-device-orientation": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    },
+    "cordova-sqlite-evcore-extbuild-free": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
     }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
+    }
+  }
 }
