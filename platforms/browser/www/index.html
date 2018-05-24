@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8">
-  <title>FossickPoint Mobile UX Demo</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>FossickPoint Mobile UX Demo</title>
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/shop-homepage.css" rel="stylesheet">
+    <!-- Cordova CSS -->
+    <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+    <!-- <link rel="stylesheet" href="css/jquery.mobile.theme.css" /> -->
 
-  <!-- Cordova CSS -->
-  <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
-  <!-- <link rel="stylesheet" href="css/jquery.mobile.theme.css" /> -->
+    <!-- FontAwesome CDN CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-  <!-- FontAwesome CDN CSS -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
-  <!-- Platform JS -->
-  <script>
-    var userAgent = navigator.userAgent + '';
-    if (userAgent.indexOf('iPhone') > -1) {
-      document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
-      var mobile_system = 'iphone';
-    } else if (userAgent.indexOf('Android') > -1) {
-      document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
-      var mobile_system = 'android';
-    } else {
-      var mobile_system = '';
-    }
-  </script>
+    <!-- Platform JS -->
+    <script>
+      var userAgent = navigator.userAgent + '';
+      if (userAgent.indexOf('iPhone') > -1) {
+        document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+        var mobile_system = 'iphone';
+      } else if (userAgent.indexOf('Android') > -1) {
+        document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+        var mobile_system = 'android';
+      } else {
+        var mobile_system = '';
+      }
+    </script>
   
-  <!-- jQuery JS -->
-  <script src="js/lib/jquery.js"></script>
-  <!-- your scripts here -->
-  <script src="js/app/app.js"></script>
-  <script src="js/app/bootstrap.js"></script>
-  <script src="js/lib/jquery.mobile.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="js/lib/jquery.js"></script>
+    <!-- your scripts here -->
+    <script src="js/app/app.js"></script>
+    <script src="js/app/bootstrap.js"></script>
+    <script src="js/lib/jquery.mobile.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   
   </head>
   <body>
@@ -174,6 +175,13 @@
       </div>
       <!-- /.container -->
     </footer>
+
+    <!-- Cordova JavaScript -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
     
     <!-- /page -->
     </div>
