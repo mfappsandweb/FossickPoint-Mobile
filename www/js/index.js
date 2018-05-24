@@ -25,14 +25,16 @@ var app = {
 	// Once the device is ready, it is safe to call device APIs.
 	onDeviceReady: function() {
         
+        
 	  //  ------ Call local SQLite Database ------  //
 	  
-		// Call the database.
+        // Call the database.
 		var db = null;
 		db = window.sqlitePlugin.openDatabase({
 			name: 'fossick.db',
-			location: 'default'
-		});
+            location: 'default',
+            androidDatabaseImplementation: 2
+        });
 		
 		db.transaction(function(tr) {
 		
@@ -41,7 +43,7 @@ var app = {
 		   * For this build, the database will be reset and repopulated on each build.
 		   */
 		  
-		  // Daily Quotes Table
+          // Daily Quotes Table
 		  
 			// Reset the table.
 			tr.executeSql('DROP TABLE IF EXISTS DailyQuotes');
@@ -62,8 +64,9 @@ var app = {
 			
 		});
 		
-	
-	  //  ------ Changing forms ------  //
+    
+        /* TODO: Add login/register in later versions
+	    //  ------ Changing forms ------  //
 		
 		// Set event listeners to each <a> link.
         document.querySelector(".message-register").addEventListener("click", toLogin, false);
@@ -106,7 +109,9 @@ var app = {
 		
 		function loginUser() {
 			window.alert(login_name.value); //This work; it pulls the value out individually
-		}
+        }
+        
+        */
 		
 		
     }

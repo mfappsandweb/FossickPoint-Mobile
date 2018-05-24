@@ -180,6 +180,25 @@
     <!-- Cordova JavaScript -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script>
+      document.addEventListener('deviceready', function() {
+        // Run SQLite Echo Test
+        alert("SQLite Echo Test");
+        window.sqlitePlugin.echoTest(function() {
+          alert('Echo test OK');
+        }, function(error) {
+          alert('Echo test ERROR: ' + error.message);
+        });
+
+        // Run SQLite Self Test
+        alert("SQLite Self Test")
+        window.sqlitePlugin.selfTest(function() {
+          alert('SELF test OK');
+        }, function(error) {
+          alert('Self test ERROR: ' + error.message);
+        });
+      });
+    </script>
     
     <!-- /page -->
     </div>

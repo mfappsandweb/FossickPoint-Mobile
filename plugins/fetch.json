@@ -159,10 +159,10 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-sqlite-evcore-extbuild-free": {
+  "cordova-sqlite-storage": {
     "source": {
       "type": "registry",
-      "id": "cordova-sqlite-evcore-extbuild-free@~0.9.7"
+      "id": "cordova-sqlite-storage"
     },
     "is_top_level": true,
     "variables": {}

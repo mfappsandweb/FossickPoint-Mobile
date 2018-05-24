@@ -64,7 +64,7 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
     },
-    "cordova-sqlite-evcore-extbuild-free": {
+    "cordova-sqlite-storage": {
       "PACKAGE_NAME": "com.mfsoftworks.fossickpoint.demo"
     }
   },
