@@ -32,11 +32,14 @@ body {
   font-size: 16pt;
   color: white;
   padding: 20px;
-  background: url("../img/text-background/sebastian-muller-52-unsplash.jpg") no-repeat right top;
+  background: url("../img/text-background/Smarties-smarties-32878037-1024-768 copy.jpg") no-repeat right top;
 }
 .delete-card {
   color: #c62825
 }
 .favourite-card {
   color: #d2a316
+}
+.list-view-img {
+  max-height: 55px !important; 
 }

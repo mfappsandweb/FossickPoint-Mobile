@@ -36,7 +36,7 @@
   
     <!-- jQuery JS -->
     <script src="js/lib/jquery.js"></script>
-    <!-- your scripts here -->
+    <!-- Extra App JS -->
     <script src="js/app/app.js"></script>
     <script src="js/app/bootstrap.js"></script>
     <script src="js/lib/jquery.mobile.js"></script>
@@ -77,21 +77,50 @@
     <!-- Page Container -->
     <div class="container">
 
-      <!-- Content -->
-      <div class="row" data-role="content">
+      <div class="col-lg-3 col-sm-12 col-xs-12" id="view-toggle">
+          <div class="form-group">
+              <select class="form-control" id="page-view">
+                <option>Card View</option>
+                <option>List View</option>
+              </select>
+            </div>
+      </div>
 
-        <div class="col-lg-4 col-md-6 mb-4" id="1">
+      <!-- Content -->
+      <div class="row" data-role="content" id="card-grid">
+        
+          <div class="col-lg-4 col-md-6 mb-4 card-view" id="3">
+            <div class="card h-100">
+              <div class="quote-container">
+                <p class="quote-text">If you can change your mind you can change your life <br> <em>William James</em></p>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Thought of the day</a>
+                </h4>
+                <p class="card-text">If you can change your mind you can change your life <br> <em>William James</em></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">
+                  <a href="#" class="delete-card">Delete <i class="fas fa-times"></i></a>
+                  &nbsp;
+                  <a href="#" class="favourite-card">Favourite <i class="fas fa-star"></i></a>
+                </small>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 card-view" id="1">
           <div class="card h-100">
-            <img class="card-img-top" src="http://placehold.it/700x400" alt="Placeholder Image">
+            <img class="card-img-top" src="img/Integrity-Builds-Trust copy.jpg" alt="Placeholder Image">
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Photo Card</a>
+                <a href="#">Integrity Builds Trust</a>
               </h4>
-              <p class="card-text">This is a sample photo card.</p>
             </div>
             <div class="card-footer">
               <small class="text-muted">
-                <a href="#" class="delete-card">Delete <i class="fas fa-times"></i></a>
+                <a href="#" onClick("removecard(1);")  class="delete-card">Delete <i class="fas fa-times"></i></a>
                 &nbsp;
                 <a href="#" class="favourite-card">Favourite <i class="fas fa-star"></i></a>
               </small>
@@ -99,7 +128,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 mb-4" id="2">
+        <div class="col-lg-4 col-md-6 mb-4 card-view" id="2">
           <div class="card h-100">
             <video class="video-container" autoplay loop>
               <source src="video/The-Launch.mp4" type="video/mp4">
@@ -113,28 +142,7 @@
             </div>
             <div class="card-footer">
               <small class="text-muted">
-                <a href="#" class="delete-card">Delete <i class="fas fa-times"></i></a>
-                &nbsp;
-                <a href="#" class="favourite-card">Favourite <i class="fas fa-star"></i></a>
-              </small>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 mb-4" id="3">
-          <div class="card h-100">
-            <div class="quote-container">
-              <p class="quote-text">This is a sample motivational text quote! ~ The Wise One</p>
-            </div>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Motivational Quote Card</a>
-              </h4>
-              <p class="card-text">This is a motivational quote card.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">
-                <a href="#" class="delete-card">Delete <i class="fas fa-times"></i></a>
+                <a href="#" onClick("removecard(2);")  class="delete-card">Delete <i class="fas fa-times"></i></a>
                 &nbsp;
                 <a href="#" class="favourite-card">Favourite <i class="fas fa-star"></i></a>
               </small>
@@ -142,7 +150,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 mb-4" id="4">
+        <div class="col-lg-4 col-md-6 mb-4 card-view" id="4">
             <div class="card h-100">
               <a href="#">
                 <img class="card-img-top" src="http://placehold.it/700x400" alt="Link Thumbnail Image">
@@ -155,13 +163,13 @@
               </div>
               <div class="card-footer">
                 <small class="text-muted">
-                  <a href="#" class="delete-card">Delete <i class="fas fa-times"></i></a>
+                  <a href="#" onClick("removecard(4);")  class="delete-card">Delete <i class="fas fa-times"></i></a>
                   &nbsp;
                   <a href="#" class="favourite-card">Favourite <i class="fas fa-star"></i></a>
                 </small>
               </div>
             </div>
-          </div>      
+          </div>
         
       </div>
       <!-- ./row -->
@@ -178,9 +186,11 @@
     </footer>
 
     <!-- Cordova JavaScript -->
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script>
+    <!-- Custom JS -->
+    <script src="js/functions.js"></script>
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+    <!-- <script>
       document.addEventListener('deviceready', function() {
         // Run SQLite Echo Test
         alert("SQLite Echo Test");
@@ -198,7 +208,7 @@
           alert('Self test ERROR: ' + error.message);
         });
       });
-    </script>
+    </script> -->
     
     <!-- /page -->
     </div>

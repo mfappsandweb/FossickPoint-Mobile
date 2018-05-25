@@ -1,6 +1,6 @@
 {
-  "name": "FossickPoint Mobile UX Demo",
-  "short_name": "FossickPoint Mobile UX Demo",
+  "name": "fossickpoint-mobile-safebox",
+  "short_name": "fossickpoint-mobile-safebox",
   "description": "Description of your app from template",
   "start_url": "index.html",
   "scope": "index.html",
