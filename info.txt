@@ -1,4 +1,4 @@
-Node version: v10.2.0
+Node version: v10.2.1
 
 Cordova version: 8.0.0
 
@@ -43,13 +43,9 @@ cordova-plugin-whitelist,cordova-sqlite-storage
 Error retrieving Android platform information: 
 Android SDK is not set up properly. Make sure that the Android SDK 'tools' and 'platform-tools' directories are in the PATH variable. 
 
-Error: cmd: Command failed with exit code 1 Error output:
-'android' is not recognized as an internal or external command,
-operable program or batch file.
+Error: android: Command failed with exit code ENOENT
 
 
 
-Error retrieving iOS platform information: Error: cmd: Command failed with exit code 1 Error output:
-'xcodebuild' is not recognized as an internal or external command,
-operable program or batch file.
+Error retrieving iOS platform information: Error: xcodebuild: Command failed with exit code ENOENT
 
