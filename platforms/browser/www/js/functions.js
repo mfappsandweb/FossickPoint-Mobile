@@ -156,13 +156,33 @@ function pageObserver() {
   removeCardObserver();
   myImgObserver();
   myVidObserver();
+  registerObserver();
+  loginObserver();
+};
+
+// Check register button
+function registerObserver() {
+  $("#make-user").click(function() {
+    alert("Registering not yet implemented.")
+  });
+};
+
+// Check login form
+function loginObserver() {
+  $("#login-form").submit(function() {
+    alert("Login user: " + $("#username").val() + "\nPassword: " + $("#password").val());
+    loadURL("index.html");
+  });
 };
 
 // Remove deleted card
 function removeCardObserver() {
   $(".delete-card").click(function(e) {
       console.log("Remove card clicked");
-      $('#' + $(this).attr("value") ).hide();
+      var deleteCard = confirm("Delete this item?");
+      if(deleteCard == true) {
+        $('#' + $(this).attr("value") ).hide();
+      }
   });
 };
 
@@ -206,4 +226,9 @@ function modalObserver()
         console.log("Closing image");
         $("#myModal").remove();
     });
+};
+
+// Change Cordova URL
+function loadURL(url) {
+  window.location.assign(url);
 };

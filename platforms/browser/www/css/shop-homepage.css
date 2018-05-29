@@ -67,10 +67,12 @@ body {
   background: url("../img/text-background/Smarties-smarties-32878037-1024-768 copy.jpg") no-repeat right top;
 }
 .delete-card {
-  color: #c62825
+  color: #c62825;
+  font: normal;
 }
 .favourite-card {
-  color: #d2a316
+  color: #d2a316;
+  font: normal;
 }
 .list-view-img {
   max-height: 55px !important; 
@@ -79,4 +81,11 @@ body {
 .list-view-vid {
   max-height: 55px !important;
   float: right;
+}
+#login-form-container {
+  padding-bottom: 2rem !important; 
+  margin: auto;
+}
+.small-content-footer {
+  margin-top: 10rem;
 }
