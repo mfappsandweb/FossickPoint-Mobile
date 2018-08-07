@@ -1,13 +1,13 @@
 {
     "name": "com.fossickpoint.safebox",
     "displayName": "fossickpoint-mobile-safebox",
-    "version": "1.0.0",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "version": "0.7.0",
+    "description": "FossickPoint Safebox Beta Application.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Apache Cordova Team",
+    "author": "Deakin University SIT302 Team 17",
     "license": "Apache-2.0",
     "dependencies": {
         "cordova-android": "^7.0.0",
