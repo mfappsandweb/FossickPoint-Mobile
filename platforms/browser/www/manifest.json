@@ -7,5 +7,5 @@
   "description": "FossickPoint Safebox Beta Application.",
   "author": "Deakin University SIT302 Team 17",
   "icons": [],
-  "start_url": "index.html"
+  "start_url": "login.html"
 }

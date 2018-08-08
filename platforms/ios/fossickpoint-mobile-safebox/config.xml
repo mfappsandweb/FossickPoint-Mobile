@@ -24,12 +24,12 @@
     </feature>
     <name>fossickpoint-mobile-safebox</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        FossickPoint Safebox Beta Application.
     </description>
     <author email="ajfle@deakin.edu.au" href="https://mf.nygmarosebeauty.com">
-        Apache Cordova Team
+        Deakin University SIT302 Team 17
     </author>
-    <content src="index.html" />
+    <content src="login.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />

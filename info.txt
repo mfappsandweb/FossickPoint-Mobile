@@ -28,11 +28,11 @@ Config.xml file:
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="cordova-sqlite-storage" spec="~2.3.2" />
-    <engine name="android" spec="^7.0.0" />
+    <engine name="android" spec="7.0.0" />
     <engine name="ios" spec="^4.5.5" />
     <engine name="browser" spec="^5.0.3" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="cordova-sqlite-storage" spec="^2.3.2" />
 </widget>
 
 
@@ -40,12 +40,54 @@ Plugins:
 
 cordova-plugin-whitelist,cordova-sqlite-storage
 
-Error retrieving Android platform information: 
-Android SDK is not set up properly. Make sure that the Android SDK 'tools' and 'platform-tools' directories are in the PATH variable. 
+Android platform:
 
-Error: cmd: Command failed with exit code 1 Error output:
-'android' is not recognized as an internal or external command,
-operable program or batch file.
+**************************************************************************
+The "android" command is deprecated.
+For manual SDK, AVD, and project management, please use Android Studio.
+For command-line tools, use tools\bin\sdkmanager.bat
+and tools\bin\avdmanager.bat
+**************************************************************************
+
+Invoking "C:\Users\arranf\AppData\Local\Android\Sdk\tools\bin\avdmanager" list target
+
+Loading local repository...                                                     [=========                              ] 25% Loading local repository...       [=========                              ] 25% Fetch remote repository...        [=========                              ] 25% Fetch remote repository...        [=========                              ] 25% Fetch remote repository...        [=======================================] 100% Fetch remote repository...       Available Android targets:
+----------
+id: 1 or "android-23"
+     Name: Android API 23
+     Type: Platform
+     API level: 23
+     Revision: 3
+----------
+id: 2 or "android-24"
+     Name: Android API 24
+     Type: Platform
+     API level: 24
+     Revision: 2
+----------
+id: 3 or "android-25"
+     Name: Android API 25
+     Type: Platform
+     API level: 25
+     Revision: 3
+----------
+id: 4 or "android-26"
+     Name: Android API 26
+     Type: Platform
+     API level: 26
+     Revision: 2
+----------
+id: 5 or "android-27"
+     Name: Android API 27
+     Type: Platform
+     API level: 27
+     Revision: 3
+----------
+id: 6 or "android-28"
+     Name: Android API 28
+     Type: Platform
+     API level: 28
+     Revision: 6
 
 
 
