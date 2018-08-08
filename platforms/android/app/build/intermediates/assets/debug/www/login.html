@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>FossickPoint Mobile UX Demo</title>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <!-- Cordova CSS -->
+    <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+    <!-- <link rel="stylesheet" href="css/jquery.mobile.theme.css" /> -->
+
+    <!-- FontAwesome CDN CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Platform JS -->
+    <script>
+      var userAgent = navigator.userAgent + '';
+      if (userAgent.indexOf('iPhone') > -1) {
+        document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+        var mobile_system = 'iphone';
+      } else if (userAgent.indexOf('Android') > -1) {
+        document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+        var mobile_system = 'android';
+      } else {
+        var mobile_system = '';
+      }
+    </script>
+  
+    <!-- jQuery JS -->
+    <script src="js/lib/jquery.js"></script>
+    <!-- Extra App JS -->
+    <script src="js/app/app.js"></script>
+    <script src="js/app/bootstrap.js"></script>
+    <script src="js/lib/jquery.mobile.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+
+    <div data-role="page">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" data-role="header">
+            <div class="container">
+              <a class="navbar-brand" href="#">Safebox</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Toolbox</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">My Profile</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+
+        <!-- Page Container -->
+        <div class="container">
+
+            <!-- Login Form -->
+            <div class="col-lg-10 col-sm-10 col-xs 10" data-role="none" id="login-form-container">
+                <form action='javascript:void(0)' id='login-form'>
+                    <h1 class='my-4' style='margin: auto; width: 50%; text-align: center;'>Log in</h1>
+                    <div class='form-group list-group-item'>
+                        <i class="fas fa-user"></i> Username
+                        <input type='text' name='username' class='form-control' id='username'>
+                    </div>
+                    <div class='form-group list-group-item'>
+                        <i class="fas fa-lock"></i> Password
+                        <input type='password' name='password' class='form-control' id='password'>
+                    </div>
+                    <div class='text-center list-group-item'>
+                      <button type='submit' id="login" class='btn btn-primary btn-md' data-role="none"><i class='fas fa-user'></i> Log in</button>&nbsp;
+                      <button type='button' id="make-user" class='btn btn-primary btn-md' data-role="none"><i class='fas fa-user-plus'></i> Add User</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!-- ./container -->
+      
+        <!-- Footer -->
+        <footer class="py-5 bg-dark small-content-footer" data-role="footer">
+          <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Deakin Capstone Team 17</p>
+          </div>
+          <!-- /.container -->
+        </footer>
+
+        <!-- Cordova JavaScript -->
+        <!-- Custom JS -->
+        <script src="js/functions.js"></script>
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
+        <!-- <script type="text/javascript" src="js/index.js"></script> -->
+        <!-- <script>
+          document.addEventListener('deviceready', function() {
+            // Run SQLite Echo Test
+            alert("SQLite Echo Test");
+            window.sqlitePlugin.echoTest(function() {
+              alert('Echo test OK');
+            }, function(error) {
+              alert('Echo test ERROR: ' + error.message);
+            });
+
+            // Run SQLite Self Test
+            alert("SQLite Self Test")
+            window.sqlitePlugin.selfTest(function() {
+              alert('SELF test OK');
+            }, function(error) {
+              alert('Self test ERROR: ' + error.message);
+            });
+          });
+        </script> -->
+    
+    <!-- /page -->
+    </div>
+    
+  </body>
+</html>

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Arran\\Desktop\\fossickpoint-mobile-safebox\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
+            "outputFile": "D:\\Projects\\FossickPoint-Mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "D:\\Arran\\Desktop\\fossickpoint-mobile-safebox\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "D:\\Projects\\FossickPoint-Mobile\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",

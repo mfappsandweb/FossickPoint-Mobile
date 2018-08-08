@@ -1,49 +1,217 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>FossickPoint Mobile UX Demo</title>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <!-- Cordova CSS -->
+    <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+    <!-- <link rel="stylesheet" href="css/jquery.mobile.theme.css" /> -->
+
+    <!-- FontAwesome CDN CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Platform JS -->
+    <script>
+      var userAgent = navigator.userAgent + '';
+      if (userAgent.indexOf('iPhone') > -1) {
+        document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+        var mobile_system = 'iphone';
+      } else if (userAgent.indexOf('Android') > -1) {
+        document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+        var mobile_system = 'android';
+      } else {
+        var mobile_system = '';
+      }
+    </script>
+  
+    <!-- jQuery JS -->
+    <script src="js/lib/jquery.js"></script>
+    <!-- Extra App JS -->
+    <script src="js/app/app.js"></script>
+    <script src="js/app/bootstrap.js"></script>
+    <script src="js/lib/jquery.mobile.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  </head>
+  <body>
+    
+    <div data-role="page">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" data-role="header">
+        <div class="container">
+          <a class="navbar-brand" href="#">Safebox</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Toolbox</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Profile</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    </nav>
+
+    <!-- Page Container -->
+    <div class="container">
+
+      <div class="col-lg-12 col-sm-12 col-xs-12" id="view-toggle" dta-role="view-toggle">
+          <div class="form-group">
+            <select class="form-control" id="page-view">
+              <option>Card View</option>
+              <option>List View</option>
+            </select>
+          </div>
+      </div>
+
+      <!-- Content -->
+      <div class="row" data-role="content" id="card-grid">
+        
+          <div class="col-lg-4 col-md-6 mb-4 card-view" id="3">
+            <div class="card h-100">
+              <div class="quote-container">
+                <p class="card-quote-text">If you can change your mind you can change your life <br> <em>William James</em></p>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Thought of the day</a>
+                </h4>
+                <p class="card-text">If you can change your mind you can change your life <br> <em>William James</em></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">
+                  <a href="#" class="delete-card" value="3"><i class="fas fa-times"> Delete</i></a>
+                  &nbsp;
+                  <a href="#" class="favourite-card"><i class="fas fa-star"> Favourite</i></a>
+                </small>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 card-view" id="1">
+          <div class="card h-100">
+            <img class="card-img-top clickableImg" src="img/Integrity-Builds-Trust copy.jpg" alt="Placeholder Image">
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Integrity Builds Trust</a>
+              </h4>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">
+                <a href="#" class="delete-card" value="1"><i class="fas fa-times"> Delete</i></a>
+                &nbsp;
+                <a href="#" class="favourite-card"><i class="fas fa-star"> Favourite</i></a>
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 card-view" id="2">
+          <div class="card h-100">
+            <video class="video-container" autoplay loop>
+              <source src="video/The-Launch.mp4" type="video/mp4">
+              This browser doesn't support video format
+            </video>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Video Card</a>
+              </h4>
+              <p class="card-text">This is a demonstration of a video card</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">
+                <a href="#" class="delete-card" value="2"><i class="fas fa-times"> Delete</i></a>
+                &nbsp;
+                <a href="#" class="favourite-card"><i class="fas fa-star"> Favourite</i></a>
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 card-view" id="4">
+            <div class="card h-100">
+              <a href="#">
+                <img class="card-img-top" src="http://placehold.it/700x400" alt="Link Thumbnail Image">
+              </a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">Link Card</a>
+                </h4>
+                <p class="card-text">This is a sample link card leading to a toolbox link.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">
+                  <a href="#" class="delete-card" value="4"><i class="fas fa-times"> Delete</i></a>
+                  &nbsp;
+                  <a href="#" class="favourite-card"><i class="fas fa-star"> Favourite</i></a>
+                </small>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+      <!-- ./row -->
+
+    </div>
+    <!-- ./container -->
+      
+    <!-- Footer -->
+    <footer class="py-5 bg-dark small-content-footer" data-role="footer">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Deakin Capstone Team 17</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Cordova JavaScript -->
+    <!-- Custom JS -->
+    <script src="js/functions.js"></script>
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+    <!-- <script>
+      document.addEventListener('deviceready', function() {
+        // Run SQLite Echo Test
+        alert("SQLite Echo Test");
+        window.sqlitePlugin.echoTest(function() {
+          alert('Echo test OK');
+        }, function(error) {
+          alert('Echo test ERROR: ' + error.message);
+        });
+
+        // Run SQLite Self Test
+        alert("SQLite Self Test")
+        window.sqlitePlugin.selfTest(function() {
+          alert('SELF test OK');
+        }, function(error) {
+          alert('Self test ERROR: ' + error.message);
+        });
+      });
+    </script> -->
+    
+    <!-- /page -->
+    </div>
+    
+  </body>
 </html>

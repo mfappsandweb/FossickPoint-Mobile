@@ -4,8 +4,8 @@
   "name": "fossickpoint-mobile-safebox",
   "short_name": "fossickpoint-mobile-safebox",
   "version": "com.fossickpoint.safebox",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
+  "description": "FossickPoint Safebox Beta Application.",
+  "author": "Deakin University SIT302 Team 17",
   "icons": [],
   "start_url": "index.html"
 }
