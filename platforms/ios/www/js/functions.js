@@ -103,7 +103,7 @@ $(document).ready(function() {
           \
                   <div class="col-lg-4 col-md-6 mb-4 card-view" id="2"> \
                     <div class="card h-100"> \
-                      <video class="video-container" autoplay loop> \
+                      <video class="video-container" loop> \
                         <source src="video/The-Launch.mp4" type="video/mp4"> \
                         This browser doesn\'t support video format \
                       </video> \
@@ -208,7 +208,7 @@ function myVidObserver() {
     console.log("Clicked video.\nSource: " + src + "\nType: " + type);
     $('nav').before(" \
       <div id='myModal'> \
-          <video id='myModalImg' autoplay loop> \
+          <video id='myModalImg' loop> \
             <source src=" + src + " type=" + type + ">  \
             This browser doesn't support video format \
           </video> \
