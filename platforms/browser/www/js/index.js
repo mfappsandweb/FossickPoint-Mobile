@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -24,17 +25,23 @@ var app = {
 	
 	// Once the device is ready, it is safe to call device APIs.
 	onDeviceReady: function() {
+
+		
+	// Function to open local SQLite Database
+	function connectToDatabase() {
+		// Support for browser and Android/iOS
+		if (window.cordova.platformId === 'browser') var database = window.openDatabase('fossick', '1.0', 'Fossick DB', 512000);
+		else var database = window.sqlitePlugin.openDatabase({name: 'fossick.db', location: 'default', androidDatabaseImplementation: 2});
+
+		// Return DB
+		return database;
+	};
         
         
 	  //  ------ Call local SQLite Database ------  //
 	  
         // Call the database.
-		var db = null;
-		db = window.sqlitePlugin.openDatabase({
-			name: 'fossick.db',
-            location: 'default',
-            androidDatabaseImplementation: 2
-        });
+		var db = connectToDatabase();
 		
 		db.transaction(function(tr) {
 		
@@ -57,11 +64,26 @@ var app = {
 			tr.executeSql('INSERT INTO DailyQuotes VALUES (?,?,?)', [6, 'Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.', 'Albert Einstein']);
 			tr.executeSql('INSERT INTO DailyQuotes VALUES (?,?,?)', [7, 'If you focus on what you left behind, then how can you see what lies ahead?', 'Chef Gusteau, \'Ratatouille\'']);
 			tr.executeSql('INSERT INTO DailyQuotes VALUES (?,?,?)', [8, 'Be mindful of the future, but not at the expense of the moment.', 'Qui-Gon - The Phantom Menace']);
+		}, function(error) {
+			alert("SQLite Storage Error: " + error.message);
+		}, function() {
+			alert("SQLite Storage Initialise Transactions Successful");
+		});
+
+		// Open DB for second transaction
+		db = connectToDatabase();
+
+		db.transaction(function(tr) {
 			//Print out the count for testing
 			tr.executeSql("SELECT count(*) AS mycount FROM DailyQuotes", [], function(tr, rs) {
 				alert('Got count result: ' + rs.rows.item(0).mycount);
+			}, function(tr, error) {
+				alert("DB Check Error: " + error.message);
 			});
-			
+		}, function(error) {
+			alert("SQLite Storage Error: " + error.message);
+		}, function() {
+			alert("SQLite Storage DB Check Transactions Successful");
 		});
 		
     
