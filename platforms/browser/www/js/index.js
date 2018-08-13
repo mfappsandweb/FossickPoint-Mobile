@@ -58,9 +58,9 @@ var app = {
 			tr.executeSql('INSERT INTO DailyQuotes VALUES (?,?,?)', [7, 'If you focus on what you left behind, then how can you see what lies ahead?', 'Chef Gusteau, \'Ratatouille\'']);
 			tr.executeSql('INSERT INTO DailyQuotes VALUES (?,?,?)', [8, 'Be mindful of the future, but not at the expense of the moment.', 'Qui-Gon - The Phantom Menace']);
 			//Print out the count for testing
-			/*tr.executeSql("SELECT count(*) AS mycount FROM DailyQuotes", [], function(tr, rs) {
-				window.alert('Got count result: ' + rs.rows.item(0).mycount);
-			});*/
+			tr.executeSql("SELECT count(*) AS mycount FROM DailyQuotes", [], function(tr, rs) {
+				alert('Got count result: ' + rs.rows.item(0).mycount);
+			});
 			
 		});
 		

@@ -46,7 +46,7 @@ $(document).ready(function() {
                     <p> \
                       This is a video \
                       <span> \
-                        <video class="list-view-vid clickableVid"> \
+                        <video class="list-view-vid clickableVid" webkit-playsinline loop poster="img/video.svg"> \
                           <source src="video/The-Launch.mp4" type="video/mp4"> \
                           This browser doesn\'t support video format \
                         </video> \
@@ -103,7 +103,7 @@ $(document).ready(function() {
           \
                   <div class="col-lg-4 col-md-6 mb-4 card-view" id="2"> \
                     <div class="card h-100"> \
-                      <video class="video-container" loop> \
+                      <video class="video-container" autoplay webkit-playsinline loop poster="img/video.svg"> \
                         <source src="video/The-Launch.mp4" type="video/mp4"> \
                         This browser doesn\'t support video format \
                       </video> \
@@ -208,7 +208,7 @@ function myVidObserver() {
     console.log("Clicked video.\nSource: " + src + "\nType: " + type);
     $('nav').before(" \
       <div id='myModal'> \
-          <video id='myModalImg' loop> \
+          <video id='myModalImg' autoplay webkit-playsinline loop> \
             <source src=" + src + " type=" + type + ">  \
             This browser doesn't support video format \
           </video> \

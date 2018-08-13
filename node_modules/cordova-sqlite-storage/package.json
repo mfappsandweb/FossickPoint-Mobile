@@ -1,8 +1,8 @@
 {
   "_from": "cordova-sqlite-storage",
-  "_id": "cordova-sqlite-storage@2.3.2",
+  "_id": "cordova-sqlite-storage@2.3.3",
   "_inBundle": false,
-  "_integrity": "sha512-rgWusdiGvRvSN9jshab6a+ZXGtzbVXq28+dHwiWJc8nCZpaOTmS9L5RB0757ckWUAkcGK/5B6Suqb4/SELdSgw==",
+  "_integrity": "sha512-YZRIFZihX4KPPeeP5pUdSJYv6lf4Pq3P7dHyfDOwr2C/0LSoF8ustqqT6l25WCLccFTk1ZEFJQkXfkPi74lg7g==",
   "_location": "/cordova-sqlite-storage",
   "_phantomChildren": {},
   "_requested": {
@@ -19,10 +19,10 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-sqlite-storage/-/cordova-sqlite-storage-2.3.2.tgz",
-  "_shasum": "b87748d93dddfa65c82594fd3c35d62417fb2e18",
+  "_resolved": "https://registry.npmjs.org/cordova-sqlite-storage/-/cordova-sqlite-storage-2.3.3.tgz",
+  "_shasum": "6efa8450291a0387df4d31c72313836f563f9d45",
   "_spec": "cordova-sqlite-storage",
-  "_where": "D:\\Arran\\Desktop\\fossickpoint-mobile-safebox",
+  "_where": "D:\\Projects\\FossickPoint-Mobile",
   "author": {
     "name": "various"
   },
@@ -65,5 +65,5 @@
   "scripts": {
     "start": "node scripts/prepareSpec.js"
   },
-  "version": "2.3.2"
+  "version": "2.3.3"
 }

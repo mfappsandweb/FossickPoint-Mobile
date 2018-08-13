@@ -130,7 +130,7 @@
 
         <div class="col-lg-4 col-md-6 mb-4 card-view" id="2">
           <div class="card h-100">
-            <video class="video-container" loop>
+            <video class="video-container" autoplay loop webkit-playsinline poster="img/video.svg">
               <source src="video/The-Launch.mp4" type="video/mp4">
               This browser doesn't support video format
             </video>
@@ -188,10 +188,15 @@
     <!-- Cordova JavaScript -->
     <!-- Custom JS -->
     <script src="js/functions.js"></script>
-    <!--<script type="text/javascript" src="cordova.js"></script>-->
+    <script type="text/javascript" src="cordova.js"></script>
     <!-- <script type="text/javascript" src="js/index.js"></script> -->
-    <!-- <script>
-      document.addEventListener('deviceready', function() {
+    <script>
+    console.log("Loading SQLite Test...");
+    document.addEventListener('deviceready', alertPageReady, false);
+    function alertPageReady() {
+      console.log("Device ready");
+    }
+    document.addEventListener('deviceready', function() {
         // Run SQLite Echo Test
         alert("SQLite Echo Test");
         window.sqlitePlugin.echoTest(function() {
@@ -207,8 +212,8 @@
         }, function(error) {
           alert('Self test ERROR: ' + error.message);
         });
-      });
-    </script> -->
+    }, false);
+    </script>
     
     <!-- /page -->
     </div>
