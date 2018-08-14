@@ -31,4 +31,5 @@
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="MediaPlaybackRequiresUserAction" value="false" />
     <preference name="setMediaPlaybackRequiresUserGesture" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
 </widget>
