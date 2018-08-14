@@ -12,6 +12,9 @@
     },
     "cordova-sqlite-storage": {
       "PACKAGE_NAME": "com.fossickpoint.safebox"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.fossickpoint.safebox"
     }
   },
   "dependent_plugins": {}
