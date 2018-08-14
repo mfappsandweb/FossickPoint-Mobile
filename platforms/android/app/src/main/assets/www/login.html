@@ -21,18 +21,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- Platform JS -->
-    <script>
-      var userAgent = navigator.userAgent + '';
-      if (userAgent.indexOf('iPhone') > -1) {
-        document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
-        var mobile_system = 'iphone';
-      } else if (userAgent.indexOf('Android') > -1) {
-        document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
-        var mobile_system = 'android';
-      } else {
-        var mobile_system = '';
-      }
-    </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script> 
+        var userAgent = navigator.userAgent + ''; 
+        if (userAgent.indexOf('iPhone') > -1) { 
+          var mobile_system = 'iphone'; 
+        } else if (userAgent.indexOf('Android') > -1) {
+          var mobile_system = 'android'; 
+        } else {
+          var mobile_system = ''; 
+        } 
+    </script> 
   
     <!-- jQuery JS -->
     <script src="js/lib/jquery.js"></script>
