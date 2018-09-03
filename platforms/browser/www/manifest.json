@@ -4,7 +4,7 @@
   "name": "fossickpoint-mobile-safebox",
   "short_name": "fossickpoint-mobile-safebox",
   "version": "com.fossickpoint.safebox",
-  "description": "FossickPoint Safebox Beta Application.",
+  "description": "Fossickpoint Safebox Beta Application.",
   "author": "Deakin University SIT302 Team 17",
   "icons": [],
   "start_url": "login.html"

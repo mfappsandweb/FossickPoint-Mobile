@@ -13,7 +13,7 @@
     </feature>
     <name>fossickpoint-mobile-safebox</name>
     <description>
-        FossickPoint Safebox Beta Application.
+        Fossickpoint Safebox Beta Application.
     </description>
     <author email="ajfle@deakin.edu.au" href="https://mf.nygmarosebeauty.com">
         Deakin University SIT302 Team 17
@@ -32,4 +32,6 @@
     <preference name="MediaPlaybackRequiresUserAction" value="false" />
     <preference name="setMediaPlaybackRequiresUserGesture" value="false" />
     <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashScreenDelay" value="0" />
 </widget>

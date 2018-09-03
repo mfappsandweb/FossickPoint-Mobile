@@ -2,7 +2,7 @@
     "name": "com.fossickpoint.safebox",
     "displayName": "fossickpoint-mobile-safebox",
     "version": "0.7.1",
-    "description": "FossickPoint Safebox Beta Application.",
+    "description": "Fossickpoint Safebox Beta Application.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"

@@ -89,3 +89,16 @@ body {
 .small-content-footer {
   margin-top: 10rem;
 }
+/**
+ * Fossickpoint Brand CSS
+ */
+.header-logo {
+  max-width: 230px;
+}
+.nav-link {
+  color: #2d2c2c !important;
+}
+.btn-primary {
+  background-color: #c1282d !important;
+  border-color: #c1282d !important;
+}
