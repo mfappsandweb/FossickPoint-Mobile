@@ -4,17 +4,6 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
 
-body {
-  padding-top: 54px;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
-
-
 /* Lightbox Background */
 #myModal {
   display: none; /* Hidden by default */
@@ -92,9 +81,6 @@ body {
 /**
  * Fossickpoint Brand CSS
  */
-.header-logo {
-  max-width: 230px;
-}
 .nav-link {
   color: #2d2c2c !important;
 }
