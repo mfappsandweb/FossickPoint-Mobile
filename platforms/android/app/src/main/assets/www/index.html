@@ -1,225 +1,224 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <title>Fossickpoint Mobile UX Demo</title>
-  
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <title>Fossickpoint Mobile UX Demo</title>
 
-    <!-- Custom styles for this template -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
+        <!-- Cordova CSS -->
+        <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- FontAwesome CDN CSS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="css/shop-homepage.css">
 
-    <!-- Cordova CSS -->
-    <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
-    <!-- <link rel="stylesheet" href="css/jquery.mobile.theme.css" /> -->
+        <!-- Set User Agent -->
+        <script> 
+            var userAgent = navigator.userAgent + ''; 
+            if (userAgent.indexOf('iPhone') > -1) { 
+              var mobile_system = 'iphone'; 
+            } else if (userAgent.indexOf('Android') > -1) {
+              var mobile_system = 'android'; 
+            } else {
+              var mobile_system = ''; 
+            } 
+        </script> 
 
-    <!-- FontAwesome CDN CSS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <!-- App JS -->
+        <!-- <script src="js/lib/jquery.mobile.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="js/app/app.js"></script>
+        <script src="js/app/bootstrap.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div data-role="page">
 
-    <!-- Platform JS -->
-    <script type="text/javascript" src="cordova.js"></script>
-    <script> 
-        var userAgent = navigator.userAgent + ''; 
-        if (userAgent.indexOf('iPhone') > -1) { 
-          var mobile_system = 'iphone'; 
-        } else if (userAgent.indexOf('Android') > -1) {
-          var mobile_system = 'android'; 
-        } else {
-          var mobile_system = ''; 
-        } 
-    </script> 
-  
-    <!-- jQuery JS -->
-    <script src="js/lib/jquery.js"></script>
-    <!-- Extra App JS -->
-    <script src="js/app/app.js"></script>
-    <script src="js/app/bootstrap.js"></script>
-    <script src="js/lib/jquery.mobile.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  
-  </head>
-  <body>
-    
-    <div data-role="page">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" data-role="header">
-        <div class="container">
-          <a class="navbar-brand" href="#">Safebox</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home
-                  <span class="sr-only">(current)</span>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white" data-role="header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" width="230" alt="fossickpoint"/>
                 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Toolbox</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">My Profile</a>
-              </li>
-            </ul>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Toolbox</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Container -->
+        <div class="container">
+
+          <div class="col-lg-12 col-sm-12 col-xs-12" id="view-toggle" dta-role="view-toggle">
+              <div class="form-group">
+                <select class="form-control" id="page-view">
+                  <option>Card View</option>
+                  <option>List View</option>
+                </select>
+              </div>
           </div>
+
+          <!-- Content -->
+          <div class="row" data-role="content" id="card-grid">
+
+              <div class="col-lg-4 col-md-6 mb-4 card-view" id="3">
+                <div class="card h-100">
+                  <div class="quote-container">
+                    <p class="card-quote-text">If you can change your mind you can change your life <br> <em>William James</em></p>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="#">Thought of the day</a>
+                    </h4>
+                    <p class="card-text">If you can change your mind you can change your life <br> <em>William James</em></p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <a href="#" class="delete-card" value="3"><i class="fas fa-times"><span class="delete-card"> Delete</span></i></a>
+                      &nbsp;
+                      <a href="#" class="favourite-card"><i class="fas fa-star"><span class="favourite-card"> Favourite</span></i></a>
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 card-view" id="1">
+              <div class="card h-100">
+                <img class="card-img-top clickableImg" src="img/Integrity-Builds-Trust copy.jpg" alt="Placeholder Image">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Integrity Builds Trust</a>
+                  </h4>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <a href="#" class="delete-card" value="1"><i class="fas fa-times"><span class="delete-card"> Delete</span></i></a>
+                    &nbsp;
+                    <a href="#" class="favourite-card"><i class="fas fa-star"><span class="favourite-card"> Favourite</span></i></a>
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 card-view" id="2">
+              <div class="card h-100">
+                <video class="video-container clickableVid" autoplay loop webkit-playsinline poster="img/video.svg">
+                  <source src="video/The-Launch.mp4" type="video/mp4">
+                  This browser doesn't support video format
+                </video>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Video Card</a>
+                  </h4>
+                  <p class="card-text">This is a demonstration of a video card</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <a href="#" class="delete-card" value="2"><i class="fas fa-times"><span class="delete-card"> Delete</span></i></a>
+                    &nbsp;
+                    <a href="#" class="favourite-card"><i class="fas fa-star"><span class="favourite-card"> Favourite</span></i></a>
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 card-view" id="4">
+                <div class="card h-100">
+                  <a href="#">
+                    <img class="card-img-top" src="http://placehold.it/700x400" alt="Link Thumbnail Image">
+                  </a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="#">Link Card</a>
+                    </h4>
+                    <p class="card-text">This is a sample link card leading to a toolbox link.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <a href="#" class="delete-card" value="4"><i class="fas fa-times"><span class="delete-card"> Delete</span></i></a>
+                      &nbsp;
+                      <a href="#" class="favourite-card"><i class="fas fa-star"><span class="favourite-card"> Favourite</span></i></a>
+                    </small>
+                  </div>
+                </div>
+            </div>
+          
         </div>
-    </nav>
+        <!-- ./row -->
 
-    <!-- Page Container -->
-    <div class="container">
-
-      <div class="col-lg-12 col-sm-12 col-xs-12" id="view-toggle" dta-role="view-toggle">
-          <div class="form-group">
-            <select class="form-control" id="page-view">
-              <option>Card View</option>
-              <option>List View</option>
-            </select>
-          </div>
-      </div>
-
-      <!-- Content -->
-      <div class="row" data-role="content" id="card-grid">
-        
-          <div class="col-lg-4 col-md-6 mb-4 card-view" id="3">
-            <div class="card h-100">
-              <div class="quote-container">
-                <p class="card-quote-text">If you can change your mind you can change your life <br> <em>William James</em></p>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Thought of the day</a>
-                </h4>
-                <p class="card-text">If you can change your mind you can change your life <br> <em>William James</em></p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">
-                  <a href="#" class="delete-card" value="3"><i class="fas fa-times"> Delete</i></a>
-                  &nbsp;
-                  <a href="#" class="favourite-card"><i class="fas fa-star"> Favourite</i></a>
-                </small>
-              </div>
-            </div>
-          </div>
-
-        <div class="col-lg-4 col-md-6 mb-4 card-view" id="1">
-          <div class="card h-100">
-            <img class="card-img-top clickableImg" src="img/Integrity-Builds-Trust copy.jpg" alt="Placeholder Image">
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Integrity Builds Trust</a>
-              </h4>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">
-                <a href="#" class="delete-card" value="1"><i class="fas fa-times"> Delete</i></a>
-                &nbsp;
-                <a href="#" class="favourite-card"><i class="fas fa-star"> Favourite</i></a>
-              </small>
-            </div>
-          </div>
         </div>
+        <!-- ./container -->
 
-        <div class="col-lg-4 col-md-6 mb-4 card-view" id="2">
-          <div class="card h-100">
-            <video class="video-container" autoplay loop webkit-playsinline poster="img/video.svg">
-              <source src="video/The-Launch.mp4" type="video/mp4">
-              This browser doesn't support video format
-            </video>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Video Card</a>
-              </h4>
-              <p class="card-text">This is a demonstration of a video card</p>
+        <!-- Footer -->
+        <footer class="py-5 bg-white small-content-footer" data-role="footer">
+            <div class="container">
+                <p class="m-0 text-center">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Deakin Capstone Team 17
+                </p>
             </div>
-            <div class="card-footer">
-              <small class="text-muted">
-                <a href="#" class="delete-card" value="2"><i class="fas fa-times"> Delete</i></a>
-                &nbsp;
-                <a href="#" class="favourite-card"><i class="fas fa-star"> Favourite</i></a>
-              </small>
-            </div>
-          </div>
+            <!-- /.container -->
+        </footer>
+
+        <!-- Custom JS -->
+        <script src="js/functions.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <!-- Database Test
+        <script>
+        alert("Loading SQLite Test...");
+        document.addEventListener('deviceready', alertPageReady, false);
+        function alertPageReady() {
+          alert("Device ready");
+        }
+        document.addEventListener(
+            'deviceready', 
+            function() {
+                if (window.cordova.platformId !== 'browser') {
+                    // Run SQLite Echo Test
+                    alert("SQLite Echo Test");
+                    window.sqlitePlugin.echoTest(function() {
+                      alert('Echo test OK');
+                    }, function(error) {
+                      alert('Echo test ERROR: ' + error.message);
+                    });
+
+                    // Run SQLite Self Test
+                    alert("SQLite Self Test")
+                    window.sqlitePlugin.selfTest(function() {
+                      alert('SELF test OK');
+                    }, function(error) {
+                      alert('Self test ERROR: ' + error.message);
+                    });
+                };
+            }, 
+            false);
+        </script> 
+        -->
+        <!-- Platform JS -->
+        <script src="cordova.js"></script>
+
+        <!-- /page -->
         </div>
-
-        <div class="col-lg-4 col-md-6 mb-4 card-view" id="4">
-            <div class="card h-100">
-              <a href="#">
-                <img class="card-img-top" src="http://placehold.it/700x400" alt="Link Thumbnail Image">
-              </a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Link Card</a>
-                </h4>
-                <p class="card-text">This is a sample link card leading to a toolbox link.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">
-                  <a href="#" class="delete-card" value="4"><i class="fas fa-times"> Delete</i></a>
-                  &nbsp;
-                  <a href="#" class="favourite-card"><i class="fas fa-star"> Favourite</i></a>
-                </small>
-              </div>
-            </div>
-          </div>
-        
-      </div>
-      <!-- ./row -->
-
-    </div>
-    <!-- ./container -->
-      
-    <!-- Footer -->
-    <footer class="py-5 bg-dark small-content-footer" data-role="footer">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Deakin Capstone Team 17</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
-    <!-- Cordova JavaScript -->
-    <!-- Custom JS -->
-    <script src="js/functions.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script>
-    alert("Loading SQLite Test...");
-    document.addEventListener('deviceready', alertPageReady, false);
-    function alertPageReady() {
-      alert("Device ready");
-    }
-    document.addEventListener(
-        'deviceready', 
-        function() {
-            if (window.cordova.platformId !== 'browser') {
-                // Run SQLite Echo Test
-                alert("SQLite Echo Test");
-                window.sqlitePlugin.echoTest(function() {
-                  alert('Echo test OK');
-                }, function(error) {
-                  alert('Echo test ERROR: ' + error.message);
-                });
-
-                // Run SQLite Self Test
-                alert("SQLite Self Test")
-                window.sqlitePlugin.selfTest(function() {
-                  alert('SELF test OK');
-                }, function(error) {
-                  alert('Self test ERROR: ' + error.message);
-                });
-            };
-        }, 
-        false);
-    </script>
-    
-    <!-- /page -->
-    </div>
-    
-  </body>
+    </body>
 </html>

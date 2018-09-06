@@ -4,6 +4,12 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
 
+/* Fossickpoint Font Family */
+@font-face {
+  font-family: fossickpoint;
+  src: url("fonts/Durotype - SimploSoft-Regular.otf") format("opentype");
+}
+
 /* Lightbox Background */
 #myModal {
   display: none; /* Hidden by default */
@@ -44,47 +50,83 @@
   float: left;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, 40%);
+  transform: translate(-50%, 25%);
+}
+.card-title {
+  text-align: center;
+}
+.card-text {
+  text-align: center;
 }
 .quote-container {
   min-height: 200px;
   text-align: center;
   vertical-align: middle;
-  font-size: 16pt;
+  font-size: 18pt;
+  font-family: fossickpoint;
   color: white;
   padding: 20px;
   background: url("../img/text-background/Smarties-smarties-32878037-1024-768 copy.jpg") no-repeat right top;
 }
 .delete-card {
-  color: #c62825;
-  font: normal;
+  color: #c1282d;
+  font-weight: 600;
+}
+.delete-card:hover, .delete-card:active {
+  color: #c1282d;
 }
 .favourite-card {
   color: #d2a316;
-  font: normal;
+  font-weight: 600;
 }
-.list-view-img {
-  max-height: 55px !important; 
-  float: right;
+.favourite-card:hover, .favourite-card:active {
+  color: #d2a316;
 }
-.list-view-vid {
-  max-height: 55px !important;
+span.delete-card, span.favourite-card {
+  font-family: sans-serif !important;
+  font-weight: 500;
+  font-size: 11pt;
+}
+option {
+  font-family: sans-serif !important;
+}
+.list-view-img, .list-view-vid {
+  max-height: 80px !important; 
   float: right;
 }
 #login-form-container {
-  padding-bottom: 2rem !important; 
+  padding-top: 7rem !important; 
   margin: auto;
 }
 .small-content-footer {
-  margin-top: 10rem;
+  margin-top: 6rem;
 }
+body {
+  font-family: sans-serif !important;
+}
+
 /**
  * Fossickpoint Brand CSS
  */
+p {
+   font-family: fossickpoint;
+}
 .nav-link {
   color: #2d2c2c !important;
+}
+.nav-link:hover {
+  color: #c1282d !important;
 }
 .btn-primary {
   background-color: #c1282d !important;
   border-color: #c1282d !important;
+}
+.btn-primary:hover, .btn-primary:active {
+  background-color: #a12024 !important;
+}
+.card-title > a {
+  color: #c1282d !important;
+}
+.card-title > a:hover, .card-title > a:active {
+  color: #a12024 !important;
 }
