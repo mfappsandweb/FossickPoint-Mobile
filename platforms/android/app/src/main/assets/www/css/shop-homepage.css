@@ -95,11 +95,11 @@ option {
   float: right;
 }
 #login-form-container {
-  padding-bottom: 2rem !important; 
+  padding-top: 7rem !important; 
   margin: auto;
 }
 .small-content-footer {
-  margin-top: 10rem;
+  margin-top: 6rem;
 }
 body {
   font-family: sans-serif !important;
