@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Sep 07 11:20:48 SGT 2018
+#Fri Sep 07 14:14:40 SGT 2018
 5.base=D\:\\Projects\\FossickPoint-Mobile\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 42.base=D\:\\Projects\\FossickPoint-Mobile\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 22.path=www/login.html
