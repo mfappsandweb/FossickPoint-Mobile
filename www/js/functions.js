@@ -295,7 +295,7 @@ function pageObserver() {
 // Check register button
 function registerObserver() {
     $("#make-user").click(function() {
-        alert("Registering not yet implemented.")
+        loadURL("register.html");
     });
 };
 

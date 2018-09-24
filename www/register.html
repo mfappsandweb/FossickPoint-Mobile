@@ -40,7 +40,7 @@
     <body>
         <div data-role="page">
 
-            <!-- Navigation -->
+			<!-- Navigation -->
             <nav class="navbar navbar-expand-lg navbar-light bg-white" data-role="header">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
@@ -48,24 +48,28 @@
                     </a>
                 </div>
             </nav>
-
+		
             <!-- Page Container -->
             <div class="container">
 
                 <!-- Login Form -->
                 <div class="col-lg-10 col-sm-10 col-xs 10" data-role="none" id="login-form-container">
-                    <form action='javascript:void(0)' id='login-form'>
-                        <div class='form-group list-group-item'>
+                    <form action='javascript:void(0)' id='register-form'>
+						<div class='form-group list-group-item'>
                             <i class="fas fa-user"></i> Email
                             <input type='text' name='email' class='form-control' id='email'>
+                        </div>
+                        <div class='form-group list-group-item'>
+                            <i class="fas fa-user"></i> Username
+                            <input type='text' name='username' class='form-control' id='username'>
                         </div>
                         <div class='form-group list-group-item'>
                             <i class="fas fa-lock"></i> Password
                             <input type='password' name='password' class='form-control' id='password'>
                         </div>
                         <div class='text-center list-group-item'>
-                          <button type='submit' id="login" class='btn btn-primary btn-md' data-role="none"><i class='fas fa-user'></i> Log in</button>&nbsp;
-                          <button type='button' id="make-user" class='btn btn-primary btn-md' data-role="none"><i class='fas fa-user-plus'></i> Add User</button>
+						  <button type='submit' id="make-user" class='btn btn-primary btn-md' data-role="none"><i class='fas fa-user-plus'></i> Add User</button>&nbsp;
+                          <button type='button' id="login" class='btn btn-primary btn-md' data-role="none"><i class='fas fa-user'></i> Return</button>
                         </div>
                     </form>
                 </div>
@@ -84,7 +88,7 @@
             </footer>
 
             <!-- Custom JS -->
-            <script src="js/functions.js"></script>
+            <script src="js/add-user.js"></script>
             <!-- Platform JS -->
             <script src="cordova.js"></script>
         
