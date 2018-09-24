@@ -33,7 +33,7 @@ var app = {
 	onDeviceReady: function() {
 
 		// Open local SQLite Database
-		function connectToDatabase() {
+		function connectToSQLite() {
 
 			// Support for browser and Android/iOS
 			if (window.cordova.platformId === 'browser') var database = window.openDatabase('fossick', '1.0', 'Fossick DB', 512000);
@@ -44,7 +44,7 @@ var app = {
 		};
 		
 		// Call the database.
-		var db = connectToDatabase();
+		var db = connectToSQLite();
 		
 		/** 
 		 * The code below is for populating the database. For this build version, quotes are hardcoded in.
@@ -71,17 +71,17 @@ var app = {
 		}, function(error) {
 			alert("SQLite Storage Error: " + error.message);
 		}, function() {
-			alert("SQLite Storage Initialise Transactions Successful");
+			//SUCCESS
 		});
 
 		// Open DB for second transaction
-		db = connectToDatabase();
+		db = connectToSQLite();
 
 		db.transaction(function(tr) {
 
 			//Print out the count for testing
 			tr.executeSql("SELECT count(*) AS mycount FROM DailyQuotes", [], function(tr, rs) {
-				alert('Got count result: ' + rs.rows.item(0).mycount);
+				//SUCCESS
 			}, function(tr, error) {
 				alert("DB Check Error: " + error.message);
 			});
@@ -89,7 +89,7 @@ var app = {
 		}, function(error) {
 			alert("SQLite Storage Error: " + error.message);
 		}, function() {
-			alert("SQLite Storage DB Check Transactions Successful");
+			//SUCCESS
 		});	
     }
 };
