@@ -1,8 +1,8 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "fossickpoint-mobile-safebox",
-  "short_name": "fossickpoint-mobile-safebox",
+  "name": "Fossickpoint Mobile Safebox",
+  "short_name": "Fossickpoint Mobile Safebox",
   "version": "com.fossickpoint.safebox",
   "description": "Fossickpoint Safebox Beta Application.",
   "author": "Deakin University SIT302 Team 17",

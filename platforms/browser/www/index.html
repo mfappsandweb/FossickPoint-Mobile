@@ -183,36 +183,38 @@
 
             <!-- Custom JS -->
             <script src="js/functions.js"></script>
-            <script type="text/javascript" src="js/index.js"></script>
+            <script src="js/index.js"></script>
+
             <!-- Database Test
             <script>
-            alert("Loading SQLite Test...");
-            document.addEventListener('deviceready', alertPageReady, false);
-            function alertPageReady() {
-            alert("Device ready");
-            }
-            document.addEventListener(
-                'deviceready', 
-                function() {
-                    if (window.cordova.platformId !== 'browser') {
-                        // Run SQLite Echo Test
-                        alert("SQLite Echo Test");
-                        window.sqlitePlugin.echoTest(function() {
-                        alert('Echo test OK');
-                        }, function(error) {
-                        alert('Echo test ERROR: ' + error.message);
-                        });
+                alert("Loading SQLite Test...");
+                document.addEventListener('deviceready', alertPageReady, false);
+                function alertPageReady() {
+                    alert("Device ready");
+                }
+                document.addEventListener(
+                    'deviceready', 
+                    function() {
+                        if (window.cordova.platformId !== 'browser') {
+                            // Run SQLite Echo Test
+                            alert("SQLite Echo Test");
+                            window.sqlitePlugin.echoTest(function() {
+                            alert('Echo test OK');
+                            }, function(error) {
+                            alert('Echo test ERROR: ' + error.message);
+                            });
 
-                        // Run SQLite Self Test
-                        alert("SQLite Self Test")
-                        window.sqlitePlugin.selfTest(function() {
-                        alert('SELF test OK');
-                        }, function(error) {
-                        alert('Self test ERROR: ' + error.message);
-                        });
-                    };
-                }, 
-                false);
+                            // Run SQLite Self Test
+                            alert("SQLite Self Test")
+                            window.sqlitePlugin.selfTest(function() {
+                            alert('SELF test OK');
+                            }, function(error) {
+                            alert('Self test ERROR: ' + error.message);
+                            });
+                        };
+                    }, 
+                    false
+                );
             </script> 
             -->
             <!-- Platform JS -->

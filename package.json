@@ -1,7 +1,7 @@
 {
     "name": "com.fossickpoint.safebox",
-    "displayName": "fossickpoint-mobile-safebox",
-    "version": "0.8.1",
+    "displayName": "Fossickpoint Mobile Safebox",
+    "version": "0.9.1",
     "description": "Fossickpoint Safebox Beta Application.",
     "main": "index.js",
     "scripts": {
