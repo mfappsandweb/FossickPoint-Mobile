@@ -7,9 +7,6 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.fossickpoint.safebox"
-    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.fossickpoint.safebox"
     },

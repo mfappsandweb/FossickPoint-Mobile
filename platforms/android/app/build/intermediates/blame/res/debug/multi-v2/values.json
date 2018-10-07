@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Projects\\FossickPoint-Mobile\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "/home/musa/Projects/Fossickpoint-Mobile/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "D:\\Projects\\FossickPoint-Mobile\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "/home/musa/Projects/Fossickpoint-Mobile/platforms/android/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",

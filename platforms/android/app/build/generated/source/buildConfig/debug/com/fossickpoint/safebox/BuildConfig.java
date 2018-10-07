@@ -8,6 +8,6 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.fossickpoint.safebox";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 801;
-  public static final String VERSION_NAME = "0.8.1";
+  public static final int VERSION_CODE = 909;
+  public static final String VERSION_NAME = "0.9.9";
 }

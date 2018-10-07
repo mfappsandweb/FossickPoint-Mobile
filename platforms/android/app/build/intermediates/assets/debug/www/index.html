@@ -46,124 +46,16 @@
                     <a class="navbar-brand" href="index.html">
                         <img src="img/logo.png" width="230" alt="fossickpoint"/>
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home
-                                    <span class="sr-only">(current)</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Toolbox</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">My Profile</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
 
             <!-- Page Container -->
             <div class="container">
 
-                <div class="col-lg-12 col-sm-12 col-xs-12 mb-4" id="view-toggle" data-role="view-toggle">
-                    <div class="form-group">
-                        <select class="form-control" id="page-view">
-                        <option>Card View</option>
-                        <option>List View</option>
-                        </select>
-                    </div>
-                </div>
-
                 <!-- Content -->
                 <div class="row" data-role="content" id="card-grid">
 
-                    <div class="col-lg-4 col-md-6 mb-4 card-view" id="3">
-                        <div class="card h-100">
-                        <div class="quote-container">
-                            <p class="card-quote-text">If you can change your mind you can change your life <br> <em>William James</em></p>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                            <a href="#">Thought of the day</a>
-                            </h4>
-                            <p class="card-text">If you can change your mind you can change your life <br> <em>William James</em></p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">
-                            <a href="#" class="delete-card" value="3"><i class="fas fa-times"><span class="delete-card"> Delete</span></i></a>
-                            &nbsp;
-                            <a href="#" class="favourite-card"><i class="fas fa-star"><span class="favourite-card"> Favourite</span></i></a>
-                            </small>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4 card-view" id="1">
-                    <div class="card h-100">
-                        <img class="card-img-top clickableImg" src="img/Integrity-Builds-Trust copy.jpg" alt="Placeholder Image">
-                        <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Integrity Builds Trust</a>
-                        </h4>
-                        </div>
-                        <div class="card-footer">
-                        <small class="text-muted">
-                            <a href="#" class="delete-card" value="1"><i class="fas fa-times"><span class="delete-card"> Delete</span></i></a>
-                            &nbsp;
-                            <a href="#" class="favourite-card"><i class="fas fa-star"><span class="favourite-card"> Favourite</span></i></a>
-                        </small>
-                        </div>
-                    </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4 card-view" id="2">
-                    <div class="card h-100">
-                        <video class="video-container clickableVid" autoplay loop webkit-playsinline poster="img/video.svg">
-                        <source src="video/The-Launch.mp4" type="video/mp4">
-                        This browser doesn't support video format
-                        </video>
-                        <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Video Card</a>
-                        </h4>
-                        <p class="card-text">This is a demonstration of a video card</p>
-                        </div>
-                        <div class="card-footer">
-                        <small class="text-muted">
-                            <a href="#" class="delete-card" value="2"><i class="fas fa-times"><span class="delete-card"> Delete</span></i></a>
-                            &nbsp;
-                            <a href="#" class="favourite-card"><i class="fas fa-star"><span class="favourite-card"> Favourite</span></i></a>
-                        </small>
-                        </div>
-                    </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4 card-view" id="4">
-                        <div class="card h-100">
-                        <a href="#">
-                            <img class="card-img-top" src="http://placehold.it/700x400" alt="Link Thumbnail Image">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                            <a href="#">Link Card</a>
-                            </h4>
-                            <p class="card-text">This is a sample link card leading to a toolbox link.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">
-                            <a href="#" class="delete-card" value="4"><i class="fas fa-times"><span class="delete-card"> Delete</span></i></a>
-                            &nbsp;
-                            <a href="#" class="favourite-card"><i class="fas fa-star"><span class="favourite-card"> Favourite</span></i></a>
-                            </small>
-                        </div>
-                        </div>
-                    </div>
+                    
                 
                 </div>
                 <!-- ./row -->
@@ -171,6 +63,18 @@
             </div>
             <!-- ./container -->
 
+			<!-- Navigation Menu -->
+			<div class="nav-menu">
+			
+			  <div class="selected-nav" id="to-home">Home</div>
+			  <div id="to-favorites">Favorites</div>
+			  <div id="to-plans">Plans</div>
+			  <div id="to-link">Link</div>
+			  <div id="to-bookings">Bookings</div>
+			  <div id="to-settings">Settings</div>
+			
+			</div>
+			
             <!-- Footer -->
             <footer class="py-5 bg-white small-content-footer" data-role="footer">
                 <div class="container">
@@ -183,36 +87,37 @@
 
             <!-- Custom JS -->
             <script src="js/functions.js"></script>
-            <script type="text/javascript" src="js/index.js"></script>
+
             <!-- Database Test
             <script>
-            alert("Loading SQLite Test...");
-            document.addEventListener('deviceready', alertPageReady, false);
-            function alertPageReady() {
-            alert("Device ready");
-            }
-            document.addEventListener(
-                'deviceready', 
-                function() {
-                    if (window.cordova.platformId !== 'browser') {
-                        // Run SQLite Echo Test
-                        alert("SQLite Echo Test");
-                        window.sqlitePlugin.echoTest(function() {
-                        alert('Echo test OK');
-                        }, function(error) {
-                        alert('Echo test ERROR: ' + error.message);
-                        });
+                alert("Loading SQLite Test...");
+                document.addEventListener('deviceready', alertPageReady, false);
+                function alertPageReady() {
+                    alert("Device ready");
+                }
+                document.addEventListener(
+                    'deviceready', 
+                    function() {
+                        if (window.cordova.platformId !== 'browser') {
+                            // Run SQLite Echo Test
+                            alert("SQLite Echo Test");
+                            window.sqlitePlugin.echoTest(function() {
+                            alert('Echo test OK');
+                            }, function(error) {
+                            alert('Echo test ERROR: ' + error.message);
+                            });
 
-                        // Run SQLite Self Test
-                        alert("SQLite Self Test")
-                        window.sqlitePlugin.selfTest(function() {
-                        alert('SELF test OK');
-                        }, function(error) {
-                        alert('Self test ERROR: ' + error.message);
-                        });
-                    };
-                }, 
-                false);
+                            // Run SQLite Self Test
+                            alert("SQLite Self Test")
+                            window.sqlitePlugin.selfTest(function() {
+                            alert('SELF test OK');
+                            }, function(error) {
+                            alert('Self test ERROR: ' + error.message);
+                            });
+                        };
+                    }, 
+                    false
+                );
             </script> 
             -->
             <!-- Platform JS -->

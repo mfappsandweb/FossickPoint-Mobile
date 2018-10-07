@@ -1,0 +1,97 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly loadAllDepsIntoIdealTree Finishing
+20 silly idealTree:prePrune cordova-sqlite-storage@2.3.3
+20 silly idealTree:prePrune ├── balanced-match@1.0.0
+20 silly idealTree:prePrune ├── brace-expansion@1.1.11
+20 silly idealTree:prePrune ├── concat-map@0.0.1
+20 silly idealTree:prePrune ├── cordova-sqlite-storage-dependencies@1.2.0
+20 silly idealTree:prePrune ├── fs.realpath@1.0.0
+20 silly idealTree:prePrune ├── glob@7.1.2
+20 silly idealTree:prePrune ├── inflight@1.0.6
+20 silly idealTree:prePrune ├── inherits@2.0.3
+20 silly idealTree:prePrune ├── interpret@1.1.0
+20 silly idealTree:prePrune ├── minimatch@3.0.4
+20 silly idealTree:prePrune ├── once@1.4.0
+20 silly idealTree:prePrune ├── path-is-absolute@1.0.1
+20 silly idealTree:prePrune ├── path-parse@1.0.6
+20 silly idealTree:prePrune ├── rechoir@0.6.2
+20 silly idealTree:prePrune ├── resolve@1.8.1
+20 silly idealTree:prePrune ├── shelljs@0.7.8
+20 silly idealTree:prePrune └── wrappy@1.0.2
+21 silly loadIdealTree Finishing
+22 silly currentTree cordova-sqlite-storage@2.3.3
+22 silly currentTree ├── balanced-match@1.0.0
+22 silly currentTree ├── brace-expansion@1.1.11
+22 silly currentTree ├── concat-map@0.0.1
+22 silly currentTree ├── cordova-sqlite-storage-dependencies@1.2.0
+22 silly currentTree ├── fs.realpath@1.0.0
+22 silly currentTree ├── glob@7.1.2
+22 silly currentTree ├── inflight@1.0.6
+22 silly currentTree ├── inherits@2.0.3
+22 silly currentTree ├── interpret@1.1.0
+22 silly currentTree ├── minimatch@3.0.4
+22 silly currentTree ├── once@1.4.0
+22 silly currentTree ├── path-is-absolute@1.0.1
+22 silly currentTree ├── path-parse@1.0.6
+22 silly currentTree ├── rechoir@0.6.2
+22 silly currentTree ├── resolve@1.8.1
+22 silly currentTree ├── shelljs@0.7.8
+22 silly currentTree └── wrappy@1.0.2
+23 silly idealTree cordova-sqlite-storage@2.3.3
+23 silly idealTree ├── balanced-match@1.0.0
+23 silly idealTree ├── brace-expansion@1.1.11
+23 silly idealTree ├── concat-map@0.0.1
+23 silly idealTree ├── cordova-sqlite-storage-dependencies@1.2.0
+23 silly idealTree ├── fs.realpath@1.0.0
+23 silly idealTree ├── glob@7.1.2
+23 silly idealTree ├── inflight@1.0.6
+23 silly idealTree ├── inherits@2.0.3
+23 silly idealTree ├── interpret@1.1.0
+23 silly idealTree ├── minimatch@3.0.4
+23 silly idealTree ├── once@1.4.0
+23 silly idealTree ├── path-is-absolute@1.0.1
+23 silly idealTree ├── path-parse@1.0.6
+23 silly idealTree ├── rechoir@0.6.2
+23 silly idealTree ├── resolve@1.8.1
+23 silly idealTree ├── shelljs@0.7.8
+23 silly idealTree └── wrappy@1.0.2
+24 silly generateActionsToTake Starting
+25 silly install generateActionsToTake
+26 verbose stack TypeError: Cannot read property 'target' of null
+26 verbose stack     at module.exports (/usr/share/npm/lib/install/filter-invalid-actions.js:24:36)
+26 verbose stack     at Array.<anonymous> (/usr/share/npm/node_modules/slide/lib/bind-actor.js:15:8)
+26 verbose stack     at LOOP (/usr/share/npm/node_modules/slide/lib/chain.js:15:14)
+26 verbose stack     at /usr/share/npm/node_modules/slide/lib/chain.js:18:7
+26 verbose stack     at Installer.computeLinked (/usr/share/npm/lib/install.js:411:41)
+26 verbose stack     at Array.<anonymous> (/usr/share/npm/node_modules/slide/lib/bind-actor.js:15:8)
+26 verbose stack     at LOOP (/usr/share/npm/node_modules/slide/lib/chain.js:15:14)
+26 verbose stack     at /usr/share/npm/node_modules/slide/lib/chain.js:18:7
+26 verbose stack     at module.exports (/usr/share/npm/lib/install/diff-trees.js:50:3)
+26 verbose stack     at Array.<anonymous> (/usr/share/npm/node_modules/slide/lib/bind-actor.js:15:8)
+27 verbose cwd /home/musa/Projects/Fossickpoint-Mobile/plugins/cordova-sqlite-storage
+28 error Linux 4.15.0-36-generic
+29 error argv "/usr/bin/node" "/usr/bin/npm" "install"
+30 error node v8.10.0
+31 error npm  v3.5.2
+32 error Cannot read property 'target' of null
+33 error If you need help, you may report this error at:
+33 error     <https://github.com/npm/npm/issues>
+34 verbose exit [ 1, true ]

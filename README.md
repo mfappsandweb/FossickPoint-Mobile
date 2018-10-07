@@ -15,7 +15,6 @@ This app is built using the Cordova cross-platform framework with the following 
 The following plugins have been installed for use within the app:
 
 - cordova-sqlite-storage
-- cordova-plugin-splashscreen
 
 ## Purpose
 

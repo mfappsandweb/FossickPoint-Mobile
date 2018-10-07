@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <title>Fossickpoint Mobile UX Demo</title>
+
+        <!-- Cordova CSS -->
+        <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- FontAwesome CDN CSS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="css/shop-homepage.css">
+
+        <!-- Set User Agent -->
+        <script> 
+            var userAgent = navigator.userAgent + ''; 
+            if (userAgent.indexOf('iPhone') > -1) { 
+              var mobile_system = 'iphone'; 
+            } else if (userAgent.indexOf('Android') > -1) {
+              var mobile_system = 'android'; 
+            } else {
+              var mobile_system = ''; 
+            } 
+        </script> 
+
+        <!-- App JS -->
+        <!-- <script src="js/lib/jquery.mobile.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="js/app/app.js"></script>
+        <script src="js/app/bootstrap.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div data-role="page">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white" data-role="header">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" width="230" alt="fossickpoint"/>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Page Container -->
+            <div class="container">
+
+                <!-- Content -->
+                <div class="row" data-role="content" id="card-grid">
+
+                    
+                
+                </div>
+                <!-- ./row -->
+
+            </div>
+            <!-- ./container -->
+
+			<!-- Navigation Menu -->
+			<div class="nav-menu">
+			
+			  <div id="to-home">Home</div>
+			  <div class="selected-nav" id="to-favorites">Favorites</div>
+			  <div id="to-plans">Plans</div>
+			  <div id="to-link">Link</div>
+			  <div id="to-bookings">Bookings</div>
+			  <div id="to-settings">Settings</div>
+			
+			</div>
+			
+            <!-- Footer -->
+            <footer class="py-5 bg-white small-content-footer" data-role="footer">
+                <div class="container">
+                    <p class="m-0 text-center">
+                        &copy; <script>document.write(new Date().getFullYear())</script> Deakin Capstone Team 17
+                    </p>
+                </div>
+                <!-- /.container -->
+            </footer>
+
+            <!-- Custom JS -->
+            <script src="js/favourites.js"></script>
+
+            <!-- Database Test
+            <script>
+                alert("Loading SQLite Test...");
+                document.addEventListener('deviceready', alertPageReady, false);
+                function alertPageReady() {
+                    alert("Device ready");
+                }
+                document.addEventListener(
+                    'deviceready', 
+                    function() {
+                        if (window.cordova.platformId !== 'browser') {
+                            // Run SQLite Echo Test
+                            alert("SQLite Echo Test");
+                            window.sqlitePlugin.echoTest(function() {
+                            alert('Echo test OK');
+                            }, function(error) {
+                            alert('Echo test ERROR: ' + error.message);
+                            });
+
+                            // Run SQLite Self Test
+                            alert("SQLite Self Test")
+                            window.sqlitePlugin.selfTest(function() {
+                            alert('SELF test OK');
+                            }, function(error) {
+                            alert('Self test ERROR: ' + error.message);
+                            });
+                        };
+                    }, 
+                    false
+                );
+            </script> 
+            -->
+            <!-- Platform JS -->
+            <script src="cordova.js"></script>
+
+        <!-- /page -->
+        </div>
+    </body>
+</html>
