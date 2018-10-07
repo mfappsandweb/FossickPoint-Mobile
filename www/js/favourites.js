@@ -15,12 +15,12 @@ $(document).ready(function() {
     console.log("Document ready");
     
 	storage = window.localStorage;
-	currentUser = storage.getItem('currentUser');
-	initialSetup();
+	currentUser = storage.getItem('currentUser');	
+    initialSetup();
+	assignPageLinks();
 
 });
 
-// Call the database to get the toolbox items.
 function initialSetup() {
 	
 	var sql = "SELECT * FROM toolbox_items";
@@ -37,7 +37,7 @@ function initialSetup() {
             switch(responseJSON.response) {
                 case true:
                     items = responseJSON.rows;
-					buildToolbox();
+					getSavedItems();
                     break;
     
                 case false:
@@ -55,46 +55,81 @@ function initialSetup() {
 	
 }
 
-function buildToolbox() {
+function getSavedItems() {
 	
-	for(var i = 0; i<items.length; i++) {
+	var sql = "SELECT * FROM user_items WHERE userID = " + currentUser + " ORDER BY itemID ASC";
+	
+	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+    {
+        query: sql
+    },
+    function(response)
+    {
+        // Try to parse response as JSON
+        try {
+            var responseJSON = JSON.parse(response);
+            switch(responseJSON.response) {
+                case true:
+					if(responseJSON.rows)
+						buildSafeBox(responseJSON.rows);
+                    break;
+    
+                case false:
+                    alert("DATABASE ERROR: Please check connection and try again later.");
+                    console.log(responseJSON.error);
+                    break;
+            }
+        }
+        catch(e) {
+            alert("DATA ERROR");
+            console.log(response);
+            return;
+        }
+    });
+	
+}
+
+function buildSafeBox(saved_items) {
+	
+	for(var i = 0; i<saved_items.length; i++) {
 		
-		var type = items[i].type;
+		// Get saved item index for finding the item in the toolbox
+		var itemIndex = saved_items[i].itemID - 1;
+		
+		var type = items[itemIndex].type;
 		// Build each card based on their type.
 		switch(type) {
 			
 			case "quote":
-				var caption = items[i].caption.split('|');
-				var id = items[i].id;
-				var url = items[i].url;
+				var caption = items[itemIndex].caption.split('|');
+				var id = items[itemIndex].id;
+				var url = items[itemIndex].url;
 				var quote_text = caption[0];
 				var quote_title = caption[1];
 				printCardQuote(id, quote_text, quote_title, url);
 				break;
 				
 			case "image":
-				var id = items[i].id;
-				var url = items[i].url;
-				var caption = items[i].caption;
+				var id = items[itemIndex].id;
+				var url = items[itemIndex].url;
+				var caption = items[itemIndex].caption;
 				printCardImage(id, url, "Placeholder Image", caption);
 				break;
 				
 			case "video":
-				var caption = items[i].caption.split('|');
-				var id = items[i].id;
-				var url = items[i].url;
+				var caption = items[itemIndex].caption.split('|');
+				var id = items[itemIndex].id;
+				var url = items[itemIndex].url;
 				var vid_type = caption[0];
 				var vid_title = caption[1];
 				var vid_text = caption[2];
 				printCardVideo(id, url, vid_type, vid_title, vid_text);
 				break;
-			
 		}
 		
 	}
 	
-	// Add observers after the initial setup
-    pageObserver();
+	pageObserver();
 	
 }
 
@@ -107,7 +142,7 @@ function printCardQuote(id, quoteText, quoteAuthor, imgURL) {
     var html = '\
     <div class="col-lg-4 col-md-6 mb-4 card-view" id="' + id + '">\
         <div class="card h-100"> \
-            <div id="daily-quote-' + id + '" class="quote-container"></div> \
+            <div id="daily-quote-' + id + '" class="daily-quote quote-container"></div> \
             <div class="card-body"> \
                 <h4 class="card-title"> \
                     <a href="#0">Thought of the day</a> \
@@ -120,7 +155,7 @@ function printCardQuote(id, quoteText, quoteAuthor, imgURL) {
                 <small class="text-muted"> \
                     <a href="#" class="share-card" value="' + id + '"><i class="fas fa-left"><span class="share-card"> Share</span></i></a> \
                     &nbsp; \
-                    <a href="#0" class="favourite-card" value="' + id + '">Favourite <i class="fas fa-star"></i></a> \
+                    <a href="#0" class="delete-card" value="' + id + '">Delete <i class="fas fa-times"></i></a> \
                 </small> \
             </div> \
         </div> \
@@ -138,7 +173,6 @@ function printCardImage(id, imageURL, imageAlt, imageCaption) {
         throw "Image card has empty ID.";
     }
 	
-
     var html = ' \
     <div class="col-lg-4 col-md-6 mb-4 card-view" id="' + id + '"> \
         <div class="card h-100"> \
@@ -152,7 +186,7 @@ function printCardImage(id, imageURL, imageAlt, imageCaption) {
                 <small class="text-muted"> \
                     <a href="#" class="share-card" value="' + id + '"><i class="fas fa-left"><span class="share-card"> Share</span></i></a> \
                     &nbsp; \
-                    <a href="#" class="favourite-card"  value="' + id + '">Favourite <i class="fas fa-star"></i></a> \
+                    <a href="#" class="delete-card"  value="' + id + '">Delete <i class="fas fa-times"></i></a> \
                 </small> \
             </div> \
         </div> \
@@ -167,8 +201,6 @@ function printCardVideo(id, videoURL, videoType, videoTitle, videoCaption) {
     if(id === null) {
         throw "Video card has empty ID.";
     }
-
-	// Get the proper path to the resources
 	
     var html = ' \
     <div class="col-lg-4 col-md-6 mb-4 card-view" id="' + id + '"> \
@@ -187,7 +219,7 @@ function printCardVideo(id, videoURL, videoType, videoTitle, videoCaption) {
                 <small class="text-muted"> \
                     <a href="#" class="share-card" value="' + id + '"><i class="fas fa-left"><span class="share-card"> Share</span></i></a> \
                     &nbsp; \
-                    <a href="#0" class="favourite-card" value="' + id + '">Favourite <i class="fas fa-star"></i></a> \
+                    <a href="#0" class="delete-card" value="' + id + '">Delete <i class="fas fa-times"></i></a> \
                 </small> \
             </div> \
         </div> \
@@ -200,10 +232,9 @@ function printCardVideo(id, videoURL, videoType, videoTitle, videoCaption) {
 // Run all page observers
 function pageObserver() {
 
-	assignPageLinks();
     myImgObserver();
     myVidObserver();
-	saveCardObserver();
+	removeCardObserver();
 
 };
 
@@ -229,63 +260,27 @@ function assignPageLinks() {
 	$("#to-link").click(function() {
 		window.open("https://www.fossickpoint.com.au/");
 	});
-}
+};
 
+// Remove deleted card
+function removeCardObserver() {
+    $(".delete-card").click(function(e) {
+        console.log("Remove card clicked");
 
-// Save card to 'Favourites'
-function saveCardObserver() {
-    $(".favourite-card").click(function(e) {
-        console.log("Favourite card clicked");
+        var deleteCard = confirm("Remove this item from favorites?");
 
-        var saveCard = confirm("Add this item to favourites?");
-
-        if(saveCard == true) {
-            checkSavedItem( $(this).attr("value") );
+        if(deleteCard == true) {
+			var id = $(this).attr("value");
+            $('#' + id).hide();
+			removeFavFromDatabase(id);
         }
     });
 };
 
-// Check whether the item has been entered
-function checkSavedItem(cardID) {
+//Remove item from user details.
+function removeFavFromDatabase(cardID) {
 	
-	var sql = "SELECT * FROM user_items WHERE userID = " + currentUser + " AND itemID = " + cardID;
-	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
-    {
-        query: sql
-    },
-    function(response)
-    {
-        // Try to parse response as JSON
-        try {
-            var responseJSON = JSON.parse(response);
-            switch(responseJSON.response) {
-                case true:
-                    if(responseJSON.rows)
-						alert("Item already saved");
-					else
-						saveCardToDatabase(cardID);
-                    break;
-    
-                case false:
-                    alert("DATABASE ERROR");
-                    console.log(responseJSON.error);
-                    break;
-            }
-        }
-        catch(e) {
-            alert("DATA ERROR");
-            console.log(response);
-            return;
-        }
-    });
-	
-}
-
-// Save card with user info to database
-function saveCardToDatabase(cardID) {
-	
-    var sql = "INSERT INTO user_items (userID, itemID) VALUES ('" + currentUser + "', '" + cardID + "')";
+	var sql = "DELETE FROM user_items WHERE userID = " + currentUser + " AND itemID = " + cardID;
 	
 	$.post( "https://fossickpoint-toolbox-web-server.tk/",
     {
@@ -298,11 +293,11 @@ function saveCardToDatabase(cardID) {
             var responseJSON = JSON.parse(response);
             switch(responseJSON.response) {
                 case true:
-                    alert("Item saved to 'Favourites'")
+					alert("Item removed from favorites");
                     break;
     
                 case false:
-                    alert("DATABASE ERROR");
+                    alert("DATABASE ERROR: Please check connection and try again later.");
                     console.log(responseJSON.error);
                     break;
             }
@@ -313,6 +308,7 @@ function saveCardToDatabase(cardID) {
             return;
         }
     });
+	
 };
 
 // Display image lightbox

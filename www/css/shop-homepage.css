@@ -59,14 +59,16 @@
   text-align: center;
 }
 .quote-container {
+  width: 100%;
   min-height: 200px;
+  padding-top: 70%;
   text-align: center;
   vertical-align: middle;
   font-size: 18pt;
   font-family: fossickpoint;
   color: white;
-  padding: 20px;
-  background: url("../img/text-background/Smarties-smarties-32878037-1024-768 copy.jpg") no-repeat right top;
+  background: no-repeat right top;
+  background-size: cover;
 }
 .delete-card {
   color: #c1282d;
@@ -74,6 +76,13 @@
 }
 .delete-card:hover, .delete-card:active {
   color: #c1282d;
+}
+.share-card {
+  color: #FFCA3E;
+  font-weight: 600;
+}
+.share-card:hover, .delete-card:active {
+  color: #FFCA3E;
 }
 .favourite-card {
   color: #d2a316;
@@ -104,6 +113,159 @@ option {
 body {
   font-family: sans-serif !important;
 }
+.plan-image {
+  width: 100%;
+  padding-top: 60%;
+  background: no-repeat top;
+  background-size: cover;
+}
+.plan-header {
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.plan-header h1 {
+  padding: 10px;
+  min-width: 200px !important;
+  color: #c1282d !important;
+  font-family: fossickpoint;
+  font-weight: bolder;
+  font-size: 20pt;
+}
+.plan-sample {
+  display: block;
+  padding: 15px 10px 0px 10px;
+  font-family: fossickpoint;
+  font-weight: 500;
+  font-size: 11pt;
+}
+.plan-sample p {
+  left: 0px;
+  width: 150px;
+}
+.plan-sample a {
+  float: right;
+  width: 75px;
+}
+.plan-header-2 {
+  padding: 10px;
+  min-width: 200px !important;
+  font-family: fossickpoint;
+  font-weight: 500;
+  font-size: 14pt;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.plan-button {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.plan-button button {
+	width: 100%;
+	padding: 10px;
+	min-width: 200px !important;
+	font-family: fossickpoint;
+	font-weight: 500;
+	font-size: 14pt;
+}
+.plan-menu {
+   overflow: auto;
+   background-color: #c1282d !important;
+   white-space: nowrap;
+   padding: 10px;
+}
+.plan-menu > div {
+  display: inline-block;
+  background-color: #c1282d !important;
+  border-color: #c1282d !important;
+  text-align: center;
+  font-family: fossickpoint;
+  font-weight: 500;
+  font-size: 14pt;
+  padding: 14px;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+.plan-menu > div:hover, .plan-menu > div:active {
+    background-color: #a12024 !important;
+}
+.plan-list {
+   padding: 20px;
+}
+.list-row {
+  display: flex;
+  flex-direction: row;
+}
+.list-item-img {
+  float: left;
+  width: 25px;
+  height: 25px;
+  min-width: 25px;
+  min-height: 25px;
+  background: url("../img/daily_task_dotpoint.png") no-repeat left top;
+  background-size: contain;
+}
+.nav-menu {
+  overflow: auto;
+  width: 100%;
+  border-color: #c1282d !important;
+  background-color: #ffffff !important;
+  white-space: nowrap;
+  position: fixed;
+  bottom: 0;
+  border-top-style: solid;
+}
+.nav-menu > div {
+  display: inline-block;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: fossickpoint;
+  font-weight: 500;
+  font-size: 14pt;
+  padding: 14px;
+  color: #000000;
+  text-decoration: none;
+}
+.nav-menu > div:hover, .plan-menu > div:active {
+  background-color: #c1282d !important;
+  color: #ffffff !important;
+}
+.selected-nav {
+  background-color: #c1282d !important;
+  color: #ffffff !important;
+}
+.plan-nav {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-family: fossickpoint;
+  font-weight: 500;
+  font-size: 14pt;
+  background-color: #ffffff;
+  color: #000000;
+  border-bottom-style: solid;
+  border-color: #c1282d;
+}
+.plan-nav > div {
+  width:50%;
+  padding: 10px;
+}
+.plan-nav > div:hover, .plan-menu > div:active {
+  background-color: #a12024 !important;
+  color: #ffffff !important;
+}
+.selected-plan-nav {
+  background-color: #c1282d;
+  color: #ffffff;
+}
 
 /**
  * Fossickpoint Brand CSS
@@ -123,6 +285,11 @@ p {
 }
 .btn-primary:hover, .btn-primary:active {
   background-color: #a12024 !important;
+}
+.btn-disabled {
+  background-color: #BCBBBB !important;
+  border-color: #BCBBBB !important;
+  color: white;
 }
 .card-title > a {
   color: #c1282d !important;
