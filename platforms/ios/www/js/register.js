@@ -66,7 +66,7 @@ function validateRegister(user, email, pw) {
         INSERT INTO fossickpoint_mobile_users(email, username, password) \
         VALUES (' + String(values) + ');';
 
-    $.post( "https://fossickpoint-toolbox-web-server.tk/",
+    $.post( "https://fossickpoint.com.au/fpapp/",
     {
         query: sql
     },

@@ -104,7 +104,7 @@ function getAllPlans() {
 	
 	var sql = "SELECT * FROM toolbox_plans";
 	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+	$.post( "https://fossickpoint.com.au/fpapp/",
     {
         query: sql
     },
@@ -139,7 +139,7 @@ function getUserPlans() {
 	
 	var sql = "SELECT * FROM user_plans WHERE userID = " + currentUser;
 	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+	$.post( "https://fossickpoint.com.au/fpapp/",
     {
         query: sql
     },

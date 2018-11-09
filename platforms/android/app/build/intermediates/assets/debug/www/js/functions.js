@@ -25,7 +25,7 @@ function initialSetup() {
 	
 	var sql = "SELECT * FROM toolbox_items";
 	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+	$.post( "https://fossickpoint.com.au/fpapp/",
     {
         query: sql
     },
@@ -250,7 +250,7 @@ function checkSavedItem(cardID) {
 	
 	var sql = "SELECT * FROM user_items WHERE userID = " + currentUser + " AND itemID = " + cardID;
 	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+	$.post( "https://fossickpoint.com.au/fpapp/",
     {
         query: sql
     },
@@ -287,7 +287,7 @@ function saveCardToDatabase(cardID) {
 	
     var sql = "INSERT INTO user_items (userID, itemID) VALUES ('" + currentUser + "', '" + cardID + "')";
 	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+	$.post( "https://fossickpoint.com.au/fpapp/",
     {
         query: sql
     },

@@ -56,7 +56,7 @@ function validateLoginForm(email, pw) {
 
     console.log("POSTing login info");
 
-    $.post( "https://fossickpoint-toolbox-web-server.tk/",
+    $.post( "https://fossickpoint.com.au/fpapp/",
     {
         query: sql
     },

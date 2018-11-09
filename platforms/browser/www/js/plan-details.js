@@ -56,7 +56,7 @@ function initialSetup() {
 	
 	var sql = "SELECT * FROM toolbox_plans WHERE id = " + planID;
 	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+	$.post( "https://fossickpoint.com.au/fpapp/",
     {
         query: sql
     },
@@ -91,7 +91,7 @@ function getPlanTasks() {
 	
 	var sql = "SELECT * FROM toolbox_daily_tasks WHERE planID = " + planID + " ORDER BY dayNum ASC";
 	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+	$.post( "https://fossickpoint.com.au/fpapp/",
     {
         query: sql
     },
@@ -150,7 +150,7 @@ function checkUserPlans() {
 	
 	var sql = "SELECT * FROM user_plans WHERE planID = " + planID + " AND userID = " + userID;
 	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+	$.post( "https://fossickpoint.com.au/fpapp/",
     {
         query: sql
     },
@@ -357,7 +357,7 @@ function registerToDatabase() {
 
 	var sql = "INSERT INTO user_plans (userID, planID, dateStarted, currentProgress) VALUES ('" + userID + "','" + planID + "','" + date + "','" + progress + "')";
 	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+	$.post( "https://fossickpoint.com.au/fpapp/",
 	{
 		query: sql
 	},
@@ -439,7 +439,7 @@ function removeFromDatabase() {
 
 	var sql = "DELETE FROM user_plans WHERE userID = " + userID + " AND planID = " + planID;
 	
-	$.post( "https://fossickpoint-toolbox-web-server.tk/",
+	$.post( "https://fossickpoint.com.au/fpapp/",
 	{
 		query: sql
 	},
